@@ -13,15 +13,13 @@ import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
 import ModalUI from "../../Modal/Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { Sliceactions } from "../../../store/Slice";
-import { uploadFile } from "../../../Helper/UploadFile";
 import { IconChangeactions } from "../../../store/ClickSlice";
-import toast from "react-hot-toast";
+
 
 
 const DropDown = () => {
 
   const [title, settitle] = useState("");
-  const [uploadfile, setuploadfile]= useState("");
   const dispatch = useDispatch();
   const click = useSelector(state=>state.click.click);
 
@@ -37,22 +35,20 @@ const DropDown = () => {
   const HandleUploadfile= async (e) => {
     const file = e.target.files[0];
     console.log(file);
-    
+
     if (file) {
-      const fileName = `${Date.now()}-${file.name}`;
-      const uploadfile = await uploadFile(file);
-      console.log(uploadfile);
-      const filePath = uploadfile.url;
-      const format = uploadfile.format;
-      setuploadfile(file);
-      
-      dispatch(Sliceactions.addFile({ fileName, filePath, format }));
-      toast.success("File Upload Successful...");
-      if(click)
-      {
-        dispatch(IconChangeactions.setclick(!click));
-      }
-      
+      const reader = new FileReader();
+      reader.onload = () => {
+        const fileName = file.name;
+        const format = file.type.startsWith('image/') ? 'image' : 'pdf';
+        const blob = new Blob([reader.result], { type: file.type });
+        const filePath = window.URL.createObjectURL(blob);
+        console.log(blob,filePath,format);
+        
+        dispatch(Sliceactions.addFile({ fileName, filePath, format }));
+        
+      };
+      reader.readAsArrayBuffer(file);
     }
   };
   
