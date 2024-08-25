@@ -18,7 +18,6 @@ import { IconChangeactions } from "../../../store/ClickSlice";
 
 
 const DropDown = () => {
-
   const [title, settitle] = useState("");
   const dispatch = useDispatch();
   const click = useSelector(state=>state.click.click);
@@ -43,7 +42,7 @@ const DropDown = () => {
         const format = file.type.startsWith('image/') ? 'image' : 'pdf';
         const blob = new Blob([reader.result], { type: file.type });
         const filePath = window.URL.createObjectURL(blob);
-        console.log(blob,"url:",filePath,format);
+        console.log("url:",filePath);
         
         dispatch(Sliceactions.addFile({ fileName, filePath, format }));
         

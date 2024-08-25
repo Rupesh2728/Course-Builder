@@ -6,14 +6,13 @@ const DownloadFile = ({ fileUrl, fileName }) => {
 
   const downloadFile = async () => {
     try {
-      // Assuming fileUrl is already a Blob URL
       const a = document.createElement('a');
       a.href = fileUrl;
-      a.download = fileName; // Set the filename for the download
+      a.download = fileName; 
       document.body.appendChild(a);
       a.click();
       
-      // Clean up after the download
+     
       window.URL.revokeObjectURL(fileUrl);
       a.remove();
 
