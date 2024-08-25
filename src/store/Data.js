@@ -2,7 +2,7 @@ const Data = [
     {
       filename: "Linear Algebra Basics",
       format: "pdf",
-      path: "https://res.cloudinary.com/dh1wpgcnm/image/upload/v1724568202/Course-builder/jwutab7nhtnciifqakka.pdf",
+      path: "blob:http://localhost:3000/84b893d7-2034-473d-8cae-4868e4e3aaf1",
     },
     {
       modulename: "Introduction to Linear Algebra",
@@ -14,7 +14,7 @@ const Data = [
         { 
           filename: "Eigenvalues and Eigenvectors",
           format: "pdf",
-          path: "https://res.cloudinary.com/dh1wpgcnm/image/upload/v1724568146/Course-builder/hgymj7afigsbdz2y1rri.pdf",
+          path: "blob:http://localhost:3000/e18a7f65-fc02-443e-a885-b6f144c98bff",
         },
       ],
     },
@@ -28,14 +28,14 @@ const Data = [
         { 
           filename: "Multivariable Calculus",
           format: "pdf",
-          path: "https://res.cloudinary.com/dh1wpgcnm/image/upload/v1724568145/Course-builder/tytiyxrlz9osomeaixqr.pdf",
+          path: "blob:http://localhost:3000/f3358f9a-238a-4c32-a3d3-b83d13b085c1",
         },
       ],
     },
     {
       filename: "Discrete Mathematics Overview",
       format: "pdf",
-      path: "https://res.cloudinary.com/dh1wpgcnm/image/upload/v1724563654/h4c12te5thbeaj8euuln.pdf",
+      path: "blob:http://localhost:3000/84b893d7-2034-473d-8cae-4868e4e3aaf1",
     },
     {
       modulename: "Graph Theory",
@@ -47,7 +47,7 @@ const Data = [
         { 
           filename: "Graph Algorithms",
           format: "pdf",
-          path: "https://res.cloudinary.com/dh1wpgcnm/image/upload/v1724568387/Course-builder/d8zvaco7bw5nez5rqpgn.pdf",
+          path: "blob:http://localhost:3000/f3358f9a-238a-4c32-a3d3-b83d13b085c1",
         },
       ],
     },

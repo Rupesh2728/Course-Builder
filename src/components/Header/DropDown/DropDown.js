@@ -43,7 +43,7 @@ const DropDown = () => {
         const format = file.type.startsWith('image/') ? 'image' : 'pdf';
         const blob = new Blob([reader.result], { type: file.type });
         const filePath = window.URL.createObjectURL(blob);
-        console.log(blob,filePath,format);
+        console.log(blob,"url:",filePath,format);
         
         dispatch(Sliceactions.addFile({ fileName, filePath, format }));
         
@@ -52,7 +52,6 @@ const DropDown = () => {
     }
   };
   
-
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
