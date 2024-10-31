@@ -1,7 +1,7 @@
 ﻿﻿﻿﻿<h1 align="center">Course Builder</h1>
 <h3 align="center">A Frontend project, which allows users to create and organize course content</h3>
-<h3 align="center">The goal of this project is to create a platform, which allows users to add links, upload images, PDF files, and
-create modules to categorize these resources systematically. </h3>
+<h4 align="center">The goal of this project is to create a platform, which allows users to add links, upload images, PDF files, and
+create modules to categorize these resources systematically. </h4>
 <h4 align="center">You can visit my website at <a href="https://course-builder-green.vercel.app/" target="blank">https://course-builder-green.vercel.app</a> </h3>
 
 <h2 align="left">Tech Stack and Tools :</h2>
